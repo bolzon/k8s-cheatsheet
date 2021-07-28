@@ -17,8 +17,8 @@ $ kubectl get pods # current namespace
 $ kubectl get pods -A # all namespaces
 $ kubectl get pods --all-namespaces # all namespaces
 
-$ kubectl get pods -n X # namespace "X"
-$ kubectl get pods --namespace X # namespace "X"
+$ kubectl get pods -n <namespace>
+$ kubectl get pods --namespace <namespace>
 ```
 
 ```sh
@@ -29,7 +29,19 @@ $ kubectl describe pods
 ```
 
 ```sh
+# get contexts
+
+$ kubectl config get-contexts
+```
+
+```sh
+# set another context
+
+$ kubectl config use-context <context-name>
+```
+
+```sh
 # switch default namespace
 
-$ kubectl config set-context --current --namespace=another-namespace
+$ kubectl config set-context --current --namespace=<namespace-name>
 ```
