@@ -45,3 +45,9 @@ $ kubectl config get-contexts
 
 $ kubectl config use-context <context-name>
 ```
+
+```sh
+# get a secret value
+
+$ kubectl get secret <my-secret> --template={{.data.<secret-key>}} | base64 -D
+```
