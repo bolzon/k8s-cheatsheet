@@ -10,6 +10,12 @@ $ kubectl describe namespaces # detailed
 ```
 
 ```sh
+# switch default namespace
+
+$ kubectl config set-context --current --namespace=<namespace-name>
+```
+
+```sh
 # list pods
 
 $ kubectl get pods # current namespace
@@ -38,10 +44,4 @@ $ kubectl config get-contexts
 # set another context
 
 $ kubectl config use-context <context-name>
-```
-
-```sh
-# switch default namespace
-
-$ kubectl config set-context --current --namespace=<namespace-name>
 ```
